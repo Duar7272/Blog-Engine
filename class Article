@@ -1,0 +1,22 @@
+class Article:
+    def __init__(self, title, content):
+        self.title = title
+        self.content = content
+        self.comments = []
+
+    def add_comment(self, comment):
+        self.comments.append(comment)
+
+    def display_comments(self):
+        print("Comments:")
+        for comment in self.comments:
+            print(comment)
+
+# Example usage
+article = Article("Hello World", "This is my first article.")
+article.add_comment("Great article!")
+article.add_comment("Keep up the good work!")
+
+print(article.title)
+print(article.content)
+article.display_comments()
